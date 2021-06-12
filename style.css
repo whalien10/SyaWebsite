@@ -1,0 +1,425 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+.background{
+	background-color: #757575;
+}
+/*header{
+	background-image: url("wall.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}*/
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #1E1E1E;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #A1A1A1;
+	color: #F3E2E2
+}
+ul.a {
+  list-style-type: circle;
+}
+
+.logo img{
+	float: left;
+	width: 180px;
+	height: ;
+}
+
+.main{
+	max-width: 1500px;
+	margin: auto;
+}
+
+.title{
+	background-color: #434343;
+	padding: 30px;
+	position: absolute;
+	width: 96%;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1{
+    left: 30%;
+	color: #CFCFCF;
+	font-size: 100px;
+	font-family: Tropical Asian DEMO;
+}
+
+.photo img{
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	width: 350px;
+	height: auto;
+		
+}
+.video{
+	top: 55%;
+    left: 65%;
+    position: absolute
+}
+.videyo{
+	top: 55%;
+    right: 70%;
+    position: absolute
+}
+.content1{
+	    background-color: #434343;
+	    color: #CFCFCF;
+	    font-size: 30px;
+	    font-family: Monotype Corsiva;
+        padding: 35px;
+	    height: 80px; 
+        width: 96%;
+}
+
+.content2 img{
+	position: absolute;
+	top: 50%;
+	left: 1%;
+        width: 650px;
+		height: 300px;
+}
+.content3 img{
+        position: absolute;
+	top: 50%;
+	left: 51%;
+        width: 650px;
+		height: 300px;
+}
+
+table {
+  width:260%;
+}
+table, td {
+  border: 2px solid #333333;
+  border-collapse: collapse;
+}
+ td {
+  padding: 15px;
+  text-align: left;
+}
+#kotak tr:nth-child(even) {
+  background-color: #9D9D9D;
+  color: #2C2C2C;
+}
+#kotak tr:nth-child(odd) {
+ background-color: #6E6E6E;
+ color: #CFCFCF;
+}
+.mytable h2{
+	color: #2F2F2F;
+	font-size: 50px;
+	font-family: Tropical Asian DEMO;
+}
+
+.mytable{
+	position: absolute;
+	top: 105%;
+	left: 20%;
+}
+
+
+.footer{
+	font-family: allura;
+	background-color: #434343;
+	color: #BFBFBF;
+	top: 180%;
+	 padding: 100px;
+    font-size: 30px;
+    width: 87%;
+	position: absolute;
+    margin-bottom: 35%;
+}
+
+.icon1 img{
+	position: absolute;
+	top: 75%;
+	left: 18%;
+        width: 150px;
+		height: 150px;
+}
+.icon2 img{
+	position: absolute;
+	top: 75%;
+	left: 31%;
+        width: 150px;
+		height: 150px;
+}
+.icon3 img{
+	position: absolute;
+	top: 75%;
+	left: 44%;
+        width: 150px;
+		height: 150px;
+}
+.icon4 img{
+	position: absolute;
+	top: 75%;
+	left: 57%;
+        width: 150px;
+		height: 150px;
+}
+.icon5 img{
+	position: absolute;
+	top: 75%;
+	left: 70%;
+        width: 150px;
+		height: 150px;
+}
+.icon6 {
+	position: absolute;
+	top: 125%;
+	background-color: #787878;
+	    color: #CFCFCF;
+	    font-size: 30px;
+	    font-family: Monotype Corsiva;
+        padding: 46px;
+	    height: 80px; 
+        width: 96%;
+	
+}
+.ikon{
+	position: absolute;
+	top: 55%;
+	background-color: #787878;
+	    color: #CFCFCF;
+	    font-size: 40px;
+	    font-family: Monotype Corsiva;
+        padding: 30px;
+	    height: 100px; 
+        width: 98%;
+}
+.ikon1{
+	position: absolute;
+	top: 65%;
+	    color: #000000;
+	    font-size: 20px;
+	    font-family: Times New Roman;
+        padding: 16px;
+	    height: 80px; 
+        width: 98%;
+} 
+
+.textbox{
+
+    background-color:transparent;
+}
+input[type=text] {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 25px;
+    width: 30%;
+    height: 25%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background:transparent;
+    color: white;
+}
+
+input[type=submit]{
+    width: 15%;
+    font-family:"Haettenschweiler";
+    font-size: 15px;
+    border-color:blanchedalmond;
+}
+
+input[type=submit]:hover{
+    color:brown;
+}
+
+button{
+    font-size: 20pt;
+    border-color: white;
+    background-color:black;
+    font-family: "Haettenschweiler";
+    color: white;
+    letter-spacing:2pt;
+}
+button:hover{
+    font-size: 20pt;
+    background-color:#a8a6a6;
+    font-family: "Haettenschweiler";
+    color: black;
+}
+
+.resume img{
+	position: absolute;
+	top: 49%;
+	left: 19%;
+        width: 785px;
+		height: 850px;
+}
+.gambar img{
+	position: absolute;
+	top: 90%;
+	left: 5%;
+        width: 300px;
+		height: 200px;
+}
+.gambar1 img{
+	position: absolute;
+	top: 90%;
+	left: 29%;
+        width: 300px;
+		height: 200px;
+}
+.gambar2 img{
+	position: absolute;
+	top: 90%;
+	left: 53%;
+        width: 300px;
+		height: 200px;
+}
+.gambar3 img{
+	position: absolute;
+	top: 90%;
+	left: 77%;
+        width: 300px;
+		height: 200px;
+}
+.gambar4 img{
+	position: absolute;
+	top: 130%;
+	left: 5%;
+        width: 300px;
+		height: 220px;
+}
+.gambar5 img{
+	position: absolute;
+	top: 130%;
+	left: 29%;
+        width: 300px;
+		height: 220px;
+}
+.gambar6 img{
+	position: absolute;
+	top: 130%;
+	left: 53%;
+        width: 300px;
+		height: 220px;
+}
+.gambar7 img{
+	position: absolute;
+	top: 130%;
+	left: 77%;
+        width: 300px;
+		height: 220px;
+}
+/*.wrapper{
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 350px;
+	width: 100%;
+	background: #2F2D2D;
+	padding: 25px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 2px rgba(254,236,164,1);
+}
+.wrapper h2{
+	text-align: center;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #D2D2D2;
+}
+.wrapper .input_field{
+	margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+	width: 100%;
+	border: 1px solid #B6B6B6;
+	padding: 6px;
+}
+
+.wrapper textarea{
+	height: 80px;
+	resize: none;
+}
+
+.wrapper .btn input[type="submit"]{
+	border: 0;
+	margin-top: 15px;
+	padding: 10px;
+	width: 100%;
+	background: #B3B3B3;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: bold;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.wrapper #error_message{
+	margin-bottom: 20px;
+	padding: 10px;
+	background: #fe8b8e;
+	text-align: center;
+	font-size: 14px;
+	transition: all 0.5s ease;
+}
+/*.icon7 {
+	position: absolute;
+	top: 127%;
+	background-color: #575757;
+        padding: 56px;
+	    height: 80px; 
+        width: 96%;
+	
+}
+/*.mediasosial{
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	width: 500px;
+}
+.fa{
+
+	padding: 15px;
+	font-size: 500px;
+	width: 255px;
+	height: ;
+	text-align: center;
+	text-decoration: none;
+	
+}
+.fa-facebook {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+	
+}
+.fa-twitter {
+    color: white;
+}

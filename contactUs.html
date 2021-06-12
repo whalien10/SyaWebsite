@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<title>WELCOME TO SYASYA's WEBSITE</title>
+ <link href="ohyes.css" rel="stylesheet" type="text/css">
+</head>
+
+
+	<body>
+	<body bgcolor = "#B3B3B3"> 
+	<header>
+		<div class="main">
+			<div class="logo">
+				<img src="whalee.png">
+			</div>
+				
+			<ul><li><a href = "syaSite.html">Home</a></li>
+			    <li><a href = "aboutme.html">AboutMe</a></li>
+				<li><a href = "socialmedia.html">SocialMedia</a></li>
+				<li><a href = "bucket.html">Bucketlist</a></li>
+				<li><a href = "myresume.html">MyResume</a></li>
+				<li><a href = "contactUs.html">ContactUs</a></li>
+			</ul>
+			
+			<frameset cols = "25%,*" border = "1" >
+                <frame src ="syaSite.html" name = "left">
+				<frame src ="aboutme.html" name = "right" scrolling="yes" noresize>
+			    <frame src ="socialmedia.html" name = "right" scrolling="yes" noresize>
+			    <frame src = "bucket.html" name = "right" scrolling="yes" noresize>
+				<frame src = "myresume.html" name = "right" scrolling="yes" noresize>
+                <frame src ="contactUs.html" name = "right" scrolling="yes" noresize>
+				</frameset>
+				
+				<br><br>
+			<div class="title">
+				<center><h1>Nur Syasya Amani  </h1> </center>
+				</div>	
+			     </div>
+				</header>
+		
+		<!----------------contact me form validation using javascript------->
+		<div class="jack"> 
+		<form name="contactForm" onsubmit="return validateForm()" action="contactUs.html" method="post">
+    <h2>Contact Us</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Message</label>
+        <input type="text" name="message">
+        <div class="error" id="messageErr"></div>
+    </div>
+    <div class="row">
+        <label>Country</label>
+        <select name="country">
+            <option>Select</option>
+            <option>Malaysia</option>
+            <option>Singapore</option>
+            <option>Indonesia</option>
+            <option>Brunei</option>
+        </select>
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label>Gender</label>
+        <div class="form-inline">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+        <label>Status <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label><input type="checkbox" name="status[]" value="single"> Single</label>
+            <label><input type="checkbox" name="status[]" value="married"> Married</label>
+            <label><input type="checkbox" name="status[]" value="divorced"> Divorced</label>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+
+		
+		
+		<!-----------javascript------->
+		
+		
+		<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var message = document.contactForm.message.value;
+    var country = document.contactForm.country.value;
+    var gender = document.contactForm.gender.value;
+    var status = [];
+    var checkboxes = document.getElementsByName("status[]");
+    for(var i=0; i < checkboxes.length; i++) {
+        if(checkboxes[i].checked) {
+            // Populate status array with selected values
+            status.push(checkboxes[i].value);
+        }
+    }
+    
+	// Defining error variables with a default value
+    var nameErr = emailErr = messageErr = countryErr = genderErr = true;
+    
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", "Please enter a valid name");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    
+    // Validate email address
+    if(email == "") {
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", "Please enter a valid email address");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    // Validate message
+    if(message == "") {
+        printError("messageErr", "Please enter your message");
+    }  else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(message) === false) {
+            printError("messageErr", "Please enter a message");
+        } else {
+            printError("messageErr", "");
+            messageErr = false;
+        }
+        
+    }
+    
+    // Validate country
+    if(country == "Select") {
+        printError("countryErr", "Please select your country");
+    } else {
+        printError("countryErr", "");
+        countryErr = false;
+    }
+    
+    // Validate gender
+    if(gender == "") {
+        printError("genderErr", "Please select your gender");
+    } else {
+        printError("genderErr", "");
+        genderErr = false;
+    }
+    
+    // Prevent the form from being submitted if there are any errors
+    if((nameErr || emailErr || messageErr || countryErr || genderErr) == true) {
+       return false;
+    } else {
+        // Creating a string from input data for preview
+        var dataPreview = "You've entered the following details: \n" +
+                          "Full Name: "  + name + "\n" +
+                          "Email Address: " + email + "\n" +
+                          "Message: " + message + "\n" +
+                          "Country: " + country + "\n" +
+                          "Gender: " + gender + "\n";
+        if(status.length) {
+            dataPreview += "Status: " + status.join(", ");
+        }
+        // Display input data in a dialog box before submitting the form
+        alert(dataPreview);
+    }
+};
+</script>
+		</div>
+
+
+
+		<!----------------footer-------------------->
+				  <div class="footer">
+				<center>
+				
+						<h6>2021 Nur Syasya Amani </h6>
+					    <hr size = "2" width = "1200px" align ="center">
+						<p>
+						</p>
+						<h6>Made by Nur Syasya Amani . Copyright</h6>
+					
+					
+				</center>
+					  </div>
+		
+
+</body>
+</body>
+</html>
